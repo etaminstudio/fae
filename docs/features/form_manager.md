@@ -34,7 +34,7 @@ After updating the FAE gem and bundling
 Replace
 
 ```slim
-<%= simple_form_for(['admin', @item]) do |f| %>
+<%= simple_form_for([:admin, @item]) do |f| %>
 ```
 
 With
@@ -49,7 +49,7 @@ ruby:
       }
     }
   }
-= simple_form_for(['admin', @item], form_options) do |f|
+= simple_form_for([:admin, @item], form_options) do |f|
 ```
 
 ### Pages / Content Blocks
