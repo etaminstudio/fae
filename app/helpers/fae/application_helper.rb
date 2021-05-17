@@ -67,7 +67,7 @@ module Fae
       else
         display_text = change.try(:changeable).try(:fae_display_field)
         display_text = (display_text.is_a? Integer) ? display_text.to_s : display_text
-        text += display_text || "##{change.changeable_id}"
+        text += l(display_text) || "##{change.changeable_id}"
 
         begin
           return link_to text, fae.edit_content_block_path(change.changeable.slug) if change.changeable_type == 'Fae::StaticPage'
