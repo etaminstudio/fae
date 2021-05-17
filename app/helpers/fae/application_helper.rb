@@ -43,7 +43,7 @@ module Fae
     end
 
     def fae_scope
-      fae.root_path.gsub('/', '')
+      fae.root_path.gsub('/', '').to_sym
     end
 
     def page_title
